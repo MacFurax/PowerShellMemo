@@ -188,3 +188,10 @@ C:\>get-process | where-object {$_.name -eq “notepad”} | stop-process
 C:\>notepad
 C:\>(get-process | where-object {$_.name -eq “notepad”}).kill()
 ```
+
+## Run PowerShell scripts
+
+First make sur you can run scripts, by default you are not allowed, the simplest way is
+```
+Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser
+```
